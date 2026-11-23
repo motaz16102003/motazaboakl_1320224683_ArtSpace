@@ -38,12 +38,18 @@ public class Artwork {
 
     public static Artwork[] getAll() {
         return new Artwork[]{
-                new Artwork(R.drawable.art_1, "Deep Field Stellar Deaths", "Smacs Carin", "2021", "https://www.nasa.gov"),
-                new Artwork(R.drawable.art_2, "Stellar Nursery", "Lina Moray", "2020", "https://www.esa.int"),
-                new Artwork(R.drawable.art_3, "Nebula Drift", "Omar Veltis", "2018", "https://webbtelescope.org"),
-                new Artwork(R.drawable.art_4, "Ringed Giant", "Maya Ortelli", "2022", "https://science.nasa.gov"),
-                new Artwork(R.drawable.art_5, "Silent Orbit", "Karim Delano", "2017", "https://www.spacetelescope.org"),
-                new Artwork(R.drawable.art_6, "Hubble Ngc Flat Final", "Sonay Billan", "2019", "https://www.jpl.nasa.gov")
+                new Artwork(R.drawable.deep_field_stellar_deaths, "Deep Field Stellar Deaths", "Smacs Carin", "2021",
+                        "https://science.nasa.gov/asset/webb/webbs-first-deep-field-nircam-image"),
+                new Artwork(R.drawable.cosmic_cliffs_carina, "Cosmic Cliffs Carina", "James Webb", "2022",
+                        "https://science.nasa.gov/missions/webb/nasas-webb-reveals-cosmic-cliffs-glittering-landscape-of-star-birth/"),
+                new Artwork(R.drawable.pillars_of_creation, "Pillars of Creation", "Eagle Nebula", "2022",
+                        "https://science.nasa.gov/asset/hubble/eagle-nebula-pillars-of-creation"),
+                new Artwork(R.drawable.southern_ring_nebula, "Southern Ring Nebula", "Vela Constellation", "2022",
+                        "https://science.nasa.gov/universe/nebulae/nasas-webb-captures-dying-stars-final-performance-in-fine-detail"),
+                new Artwork(R.drawable.stephans_quintet, "Stephan's Quintet", "Pegasus Group", "2022",
+                        "https://science.nasa.gov/missions/webb/nasas-webb-sheds-light-on-galaxy-evolution-black-holes/"),
+                new Artwork(R.drawable.hubble_ngc_flat_final, "Hubble Ngc Flat Final", "Sonay Billan", "2019",
+                        "https://science.nasa.gov/missions/hubble/hubble-views-a-galactic-marvel/")
         };
     }
 }
