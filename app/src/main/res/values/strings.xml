@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ArtSpace</string>
+    <string name="counter_format">%1$d / %2$d</string>
+    <string name="artist_year_format">%1$s  (%2$s)</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="visit_website">Visit Website</string>
+    <string name="details_title">Artwork Details</string>
+    <string name="no_browser">No browser found on this device</string>
+</resources>
