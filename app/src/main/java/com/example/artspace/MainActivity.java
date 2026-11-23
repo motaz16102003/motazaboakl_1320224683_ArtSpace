@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
         mNext = findViewById(R.id.button_next);
 
         if (savedInstanceState != null) {
-            mIndex = savedInstanceState.getInt(KEY_INDEX, 0);
+            int saved = savedInstanceState.getInt(KEY_INDEX, 0);
+            mIndex = Math.max(0, Math.min(saved, mArtworks.length - 1));
         }
 
         mPrevious.setOnClickListener(v -> {
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
     private void updateUi() {
         Artwork artwork = mArtworks[mIndex];
         mImage.setImageResource(artwork.getImageRes());
+        mImage.setContentDescription(artwork.getTitle());
         mTitle.setText(artwork.getTitle());
         mArtistYear.setText(getString(R.string.artist_year_format, artwork.getArtist(), artwork.getYear()));
         mCounter.setText(getString(R.string.counter_format, mIndex + 1, mArtworks.length));

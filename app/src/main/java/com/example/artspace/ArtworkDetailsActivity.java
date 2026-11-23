@@ -4,6 +4,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,13 +28,17 @@ public class ArtworkDetailsActivity extends AppCompatActivity {
         String year = intent.getStringExtra(EXTRA_YEAR);
         String url = intent.getStringExtra(EXTRA_URL);
 
-        ((TextView) findViewById(R.id.details_title)).setText(title);
-        ((TextView) findViewById(R.id.details_artist)).setText(artist);
-        ((TextView) findViewById(R.id.details_year)).setText(year);
+        ((TextView) findViewById(R.id.details_title)).setText(title != null ? title : "");
+        ((TextView) findViewById(R.id.details_artist)).setText(artist != null ? artist : "");
+        ((TextView) findViewById(R.id.details_year)).setText(year != null ? year : "");
 
         findViewById(R.id.button_back).setOnClickListener(v -> finish());
 
-        findViewById(R.id.button_visit).setOnClickListener(v -> {
+        View visitButton = findViewById(R.id.button_visit);
+        if (url == null || url.isEmpty()) {
+            visitButton.setEnabled(false);
+        }
+        visitButton.setOnClickListener(v -> {
             Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             try {
                 startActivity(webIntent);
